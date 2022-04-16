@@ -70,6 +70,9 @@ struct rt_sigframe {
 		: "memory")
 /* clang-format on */
 
+#define COMPEL_SIGRETURN_OFFSET	0
+#define PIE_SIGRETURN_OFFSET	0
+
 #define RT_SIGFRAME_UC(rt_sigframe)	 (&rt_sigframe->uc)
 #define RT_SIGFRAME_REGIP(rt_sigframe)	 (rt_sigframe)->uc.uc_mcontext.regs.psw.addr
 #define RT_SIGFRAME_HAS_FPU(rt_sigframe) (1)

@@ -51,6 +51,9 @@ struct rt_sigframe {
 	: "$2","memory")
 /* clang-format on */
 
+#define COMPEL_SIGRETURN_OFFSET	0
+#define PIE_SIGRETURN_OFFSET	0
+
 int sigreturn_prep_fpu_frame(struct rt_sigframe *sigframe, struct rt_sigframe *rsigframe);
 
 #define rt_sigframe_erase_sigset(sigframe)	memset(&sigframe->rs_uc.uc_sigmask, 0, sizeof(k_rtsigset_t))

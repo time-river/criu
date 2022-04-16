@@ -43,6 +43,9 @@ struct rt_sigframe {
 			: "x8", "memory")
 /* clang-format on */
 
+#define COMPEL_SIGRETURN_OFFSET	0x8
+#define PIE_SIGRETURN_OFFSET	0xc
+
 /* cr_sigcontext is copied from arch/arm64/include/uapi/asm/sigcontext.h */
 struct cr_sigcontext {
 	__u64 fault_address;

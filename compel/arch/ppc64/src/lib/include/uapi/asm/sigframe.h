@@ -54,6 +54,9 @@ struct rt_sigframe {
 		: "memory")
 /* clang-format on */
 
+#define COMPEL_SIGRETURN_OFFSET	0
+#define PIE_SIGRETURN_OFFSET	0
+
 #if _CALL_ELF != 2
 #error Only supporting ABIv2.
 #else

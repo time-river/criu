@@ -212,6 +212,9 @@ do {									\
 } while (0)
 /* clang-format off */
 
+#define COMPEL_SIGRETURN_OFFSET	0
+#define PIE_SIGRETURN_OFFSET	0
+
 int sigreturn_prep_fpu_frame(struct rt_sigframe *sigframe,
 		struct rt_sigframe *rsigframe);
 
